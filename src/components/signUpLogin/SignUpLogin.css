@@ -1,0 +1,110 @@
+.carousel-slide {
+  display: flex !important;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  height: 100%; /* Ensure the container takes up the full height */
+}
+
+.login-left-panel {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-input .MuiInputBase-root {
+  height: 40px;
+  font-size: 12px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #f3f4f6ff;
+}
+.form-input {
+  margin-bottom: 15px !important;
+}
+.form-input fieldset {
+  border: none;
+}
+/* .form-input input::placeholder {
+  color: black !important;
+  font-weight: 500;
+} */
+
+.img-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup-login-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.signup-login-form-container {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  /* justify-content: center; */
+  height: fit-content !important;
+  width: 60% !important;
+  background: #ffffffff; /* white */
+  border-radius: 8px; /* border-xl */
+  box-shadow: 0px 2px 5px #e7ecf5, 0px 0px 2px #a1a3a5;
+  padding: 10px 35px 25px 35px;
+  /* max-height: fit-content; */
+  max-width: 520px;
+  font-family: Lexend !important ;
+}
+.login-heading {
+  font-family: Lexend !important; /* Heading */
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 48px;
+}
+.login-sub-heading {
+  font-family: Lexend !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 30px;
+  color: #9095a1ff;
+}
+
+.login-signup-header-txt-container {
+  width: 100%;
+  /* margin-bottom: 50px; */
+  margin-bottom: 25px;
+}
+
+.signup-login-btn {
+  width: 100%;
+  background: #6d31edff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .signup-login-right-panel {
+    display: none;
+  }
+  .signup-login-form-container {
+    width: 90%;
+    height: 70%;
+  }
+  .form-input {
+    margin-bottom: 20px !important;
+  }
+
+  .login-signup-header-txt-container {
+    /* width: 100%; */
+    margin-bottom: 40px;
+    /* margin-bottom: 25px; */
+  }
+  .login-heading {
+    font-size: 28px !important;
+  }
+  .form-input .MuiInputBase-root {
+    height: 50px;
+  }
+}

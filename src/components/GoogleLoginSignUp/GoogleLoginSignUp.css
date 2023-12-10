@@ -1,0 +1,23 @@
+.horizontal-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 40%;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 10px;
+}
+
+.or {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.or-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
