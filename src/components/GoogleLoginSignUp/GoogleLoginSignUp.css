@@ -8,15 +8,29 @@
   width: 40%;
   border: none;
   border-top: 1px solid black;
-  margin: 0 10px;
 }
 
 .or {
   padding: 0 10px;
   font-weight: bold;
+  color: #979191;
 }
 
 .or-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-signin-container {
+  width: 100%;
+}
+
+.or-container {
+  padding: 20px 0 20px 0;
+}
+
+.google-btn-container {
   display: flex;
   align-items: center;
   justify-content: center;

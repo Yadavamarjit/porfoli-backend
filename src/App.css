@@ -1,3 +1,39 @@
 .App {
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-primary {
+  background: #6d31edff !important;
+}
+.btn-secondary {
+  background: #d931ed !important;
+}
+.btn-err {
+  color: white !important;
+  background: #c71c72 !important;
+}
+textarea {
+  min-height: 40px !important;
+  background-color: #f3f4f6ff;
+  min-width: 100%;
+  max-width: 100%;
+  border: none;
+  outline: none;
+}
+.textarea-container {
+}
+.tech-stack-input fieldset {
+  background-color: #f3f4f6ff;
+  border: none;
+  outline: none;
+}
+.tech-stack-input input {
+  z-index: 1;
 }

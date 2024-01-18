@@ -1,8 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import HomePage from "./components/homepage/HomePage";
-import { Link, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignUpLogin from "./components/signUpLogin/SignUpLogin";
+import Upload from "./components/upload/Upload";
+import { UserProvider } from "./context/UserProvider";
+import UploadTechs from "./components/uploadTechs/UploadTechs";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,10 +20,16 @@ function App() {
       path: "/signup",
       element: <SignUpLogin />,
     },
+    {
+      path: "/add",
+      element: <UploadTechs input={true} />,
+    },
   ]);
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
     </div>
   );
 }

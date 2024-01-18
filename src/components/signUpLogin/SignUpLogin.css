@@ -10,10 +10,10 @@
 }
 
 .form-input .MuiInputBase-root {
-  height: 40px;
+  height: 40px !important;
   font-size: 12px;
   border-radius: 5px;
-  width: 100%;
+  width: 100% !important;
   background-color: #f3f4f6ff;
 }
 .form-input {

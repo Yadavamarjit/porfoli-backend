@@ -10,7 +10,7 @@ import axios from "axios";
 import { LoadingButton } from "@mui/lab";
 import { debounce, validateField } from "../../utils";
 import GoogleLoginSignUp from "../GoogleLoginSignUp/GoogleLoginSignUp";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { addUser } from "../../store/userSlice";
 
@@ -44,7 +44,7 @@ export default function SignUpLogin() {
 
   const [loading, setLoading] = useState(false);
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const pathname = window.location.pathname.split("/")[1];
 
@@ -92,8 +92,10 @@ export default function SignUpLogin() {
       );
       if (data["token"]) {
         localStorage.setItem("token", data["token"]);
+        localStorage.setItem("name", data["user"]["name"]);
+        localStorage.setItem("email", data["user"]["email"]);
         // dispatch(addUser(data.user));
-        // navigate("/");
+        navigate("/");
         setLoading(false);
       }
     } catch (e) {
@@ -117,7 +119,9 @@ export default function SignUpLogin() {
         <Grid className="signup-login-form-container">
           <Grid className="login-signup-header-txt-container">
             <Typography className="login-heading">
-              {pathname === "signup" ? "Let's Get Started 🚀" : "Welcome back"}
+              {pathname === "signup"
+                ? "Let's Get Started 🚀"
+                : "Welcome back 👏"}
             </Typography>
             <Typography className="login-sub-heading">
               {pathname === "signup"
