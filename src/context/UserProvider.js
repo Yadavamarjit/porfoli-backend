@@ -1,5 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
-import { fetch } from "../utils/fetch";
+import React, { createContext, useState, useContext } from "react";
 import { fetchAdminData } from "../utils/adminUtils";
 
 const UserContext = createContext();

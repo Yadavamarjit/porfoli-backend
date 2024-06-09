@@ -2,7 +2,6 @@ import "./App.css";
 import HomePage from "./components/homepage/HomePage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import SignUpLogin from "./components/signUpLogin/SignUpLogin";
-import Upload from "./components/upload/Upload";
 import { UserProvider } from "./context/UserProvider";
 import UploadTechs from "./components/uploadTechs/UploadTechs";
 import "./styles/tailwind.css";

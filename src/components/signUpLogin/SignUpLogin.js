@@ -14,16 +14,16 @@ import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { addUser } from "../../store/userSlice";
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3001,
-  arrows: false,
-};
+// const settings = {
+//   dots: false,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 3001,
+//   arrows: false,
+// };
 
 export default function SignUpLogin() {
   // const dispatch = useDispatch();
@@ -167,7 +167,7 @@ export default function SignUpLogin() {
           className="signup-login-img"
           // style={{ backgroundImage: `url(${loginPage})` }}
         >
-          <img src={loginPage} />
+          <img src={loginPage} alt="img" />
           {/* <Slider
             {...settings}
             style={{

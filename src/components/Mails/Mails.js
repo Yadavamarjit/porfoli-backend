@@ -9,10 +9,6 @@ import Paper from "@mui/material/Paper";
 import { extractRowsCols } from "../../utils/adminUtils";
 import { Grid } from "@mui/material";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
 export default function Mails({ type, data }) {
   const { cols, rows } = extractRowsCols(data);
   console.log({ rows }, extractRowsCols(data));
