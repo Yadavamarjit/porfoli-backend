@@ -11,7 +11,7 @@ export default function GoogleLoginSignUp({ handleClick }) {
         <hr class="line"></hr>
       </div>
       <div className="google-btn-container">
-        <GoogleOAuthProvider clientId="412263138582-3net4j37bhj5aes9vn522nr6p1qohpoj.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId="828906162882-ple0e33qsg4p8dnrjt6jug1grron9f7g.apps.googleusercontent.com">
           <GoogleLogin
             onSuccess={(credentialResponse) => {
               const { email, given_name: name } = jwtDecode(
