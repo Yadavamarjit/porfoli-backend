@@ -37,7 +37,7 @@ export const fetch = async (
     if (error.response && error.response.status === 401) {
       // Redirect to /login if status code is 401
       localStorage.clear();
-      // window.location.href = "/login";
+      window.location.href = "/login";
       // return;
     }
     throw error;

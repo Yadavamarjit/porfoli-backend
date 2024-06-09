@@ -5,6 +5,7 @@ import SignUpLogin from "./components/signUpLogin/SignUpLogin";
 import Upload from "./components/upload/Upload";
 import { UserProvider } from "./context/UserProvider";
 import UploadTechs from "./components/uploadTechs/UploadTechs";
+import "./styles/tailwind.css";
 
 function App() {
   const router = createBrowserRouter([

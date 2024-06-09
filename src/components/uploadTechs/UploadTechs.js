@@ -17,7 +17,7 @@ export default function UploadTechs() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const { data } = await fetch("GET", "techs/all");
+      const { data } = await fetch("GET", "/techs/all");
       setTechs(data);
       setLoading(false);
     })();

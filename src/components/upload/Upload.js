@@ -106,7 +106,7 @@ const FileUpload = ({
               startIcon={<CloudUploadIcon />}
               onClick={handleFileUpload}
               fullWidth
-              disabled={disable()}
+              disabled={disable ? disable() : false}
             >
               Upload
             </Button>

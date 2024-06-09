@@ -9,42 +9,49 @@ const UserProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
   const [experiences, setExperiences] = useState([]);
   const [userLoading, setUserLoading] = useState(true);
+  const [messages, setMessages] = useState([]);
+  const [visitors, setVisitors] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await fetchAdminData();
-        setUserLoading(false);
-        console.log(data.user);
-        const {
-          experiences,
-          projects,
-          email,
-          heading,
-          name,
-          profilePic,
-          profession,
-          techStacks,
-          subHeader,
-          overView,
-        } = data.user;
-        setBasicInfo({
-          email,
-          heading,
-          name,
-          profession,
-          profilePic,
-          techStacks,
-          subHeader,
-          overView,
-        });
-        setProjects([...projects]);
-        setExperiences([...experiences]);
-      } catch (err) {
-        console.log("Error in getting user Data", err);
-      }
-    })();
-  }, []);
+  const getBasicInfo = async () => {
+    try {
+      const data = await fetchAdminData();
+      setUserLoading(false);
+      console.log(data.user);
+      const {
+        experiences,
+        projects,
+        email,
+        heading,
+        name,
+        profilePic,
+        profession,
+        techStacks,
+        subHeader,
+        overView,
+        messages,
+        visitors: allVisitors,
+      } = data.user;
+      setBasicInfo({
+        email,
+        heading,
+        name,
+        profession,
+        profilePic,
+        techStacks,
+        subHeader,
+        overView,
+      });
+
+      setProjects([...projects]);
+      setExperiences([...experiences]);
+      setMessages([...messages]);
+      setVisitors(allVisitors);
+    } catch (err) {
+      console.log("Error in getting user Data", err);
+    }
+  };
+
+  // useEffect(() => {}, []);
 
   return (
     <UserContext.Provider
@@ -56,6 +63,9 @@ const UserProvider = ({ children }) => {
         experiences,
         setExperiences,
         userLoading,
+        messages,
+        getBasicInfo,
+        visitors,
       }}
     >
       {children}
