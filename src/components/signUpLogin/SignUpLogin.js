@@ -84,7 +84,9 @@ export default function SignUpLogin() {
     try {
       console.log({ ...requestBody }, googleSignin);
       const { data } = await axios.post(
-        "http://localhost:5000/" + (googleSignin ? "google" : pathname),
+        process.env.REACT_APP_ADMIN_API +
+          "/" +
+          (googleSignin ? "google" : pathname),
         {
           ...requestBody,
         }

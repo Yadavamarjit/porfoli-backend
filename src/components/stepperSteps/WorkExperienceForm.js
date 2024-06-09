@@ -68,7 +68,7 @@ const WorkExperienceForm = ({ id, userData, setUserData, experienceData }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/experience",
+        process.env.REACT_APP_ADMIN_API + "/experience",
         {
           experience: formData,
         },

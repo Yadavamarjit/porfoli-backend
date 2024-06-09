@@ -22,6 +22,7 @@ import { useUserContext } from "../../context/UserProvider";
 import { useEffect } from "react";
 import Visitor from "../visitors/Visitor";
 import Dashboard from "../DashBoard/Dashboard";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 200;
 
@@ -95,7 +96,14 @@ export default function HomePage() {
   const [open, setOpen] = React.useState(false);
   const [selectedTab, setSelectedTab] = React.useState("Dashboard");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+      return;
+    }
     getBasicInfo();
   }, []);
 

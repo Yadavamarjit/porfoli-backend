@@ -79,9 +79,13 @@ export function VerticalStepper() {
       };
 
       // Make the API call to update user data with the updated userData
-      const res = await axios.put("http://localhost:5000/basicinfo", userData, {
-        headers,
-      });
+      const res = await axios.put(
+        process.env.REACT_APP_ADMIN_API + "/basicinfo",
+        userData,
+        {
+          headers,
+        }
+      );
       setformUpdated(false);
       console.log("User data updated successfully!", res.data);
     } catch (error) {

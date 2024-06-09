@@ -70,7 +70,7 @@ const ProjectForm = ({ id, userData, setUserData, projectData }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/projects",
+        process.env.REACT_APP_ADMIN_API + "/projects",
         formData,
         {
           headers: {
