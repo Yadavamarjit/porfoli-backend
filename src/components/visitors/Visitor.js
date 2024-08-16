@@ -58,15 +58,19 @@ export default function Visitor() {
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <CustomMap />
-          {visitors.map((data) => (
-            <Marker
-              position={[data.latitude, data.longitude]}
-              icon={icon}
-              key={data._id}
-            >
-              <Popup>{data.city}</Popup>
-            </Marker>
-          ))}
+          {visitors.map(
+            (data) =>
+              data?.latitude &&
+              data?.longitude && (
+                <Marker
+                  position={[data.latitude, data.longitude]}
+                  icon={icon}
+                  key={data._id}
+                >
+                  <Popup>{data.city}</Popup>
+                </Marker>
+              )
+          )}
         </MapContainer>
       </div>
 
