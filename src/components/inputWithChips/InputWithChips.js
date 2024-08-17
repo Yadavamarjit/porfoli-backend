@@ -40,7 +40,7 @@ export const InputWithChips = ({ onChange, customClass, selected }) => {
       };
 
       const response = await axios.get(
-        `http://localhost:5000/tech?search=${query}`,
+        `${process.env.REACT_APP_ADMIN_API}/tech?search=${query}`,
         { headers }
       );
       return response.data;

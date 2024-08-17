@@ -45,7 +45,9 @@ const FileUpload = ({
       formData.append("key", localStorage.getItem("email"));
 
       const res = await axios.post(
-        `http://localhost:5000/${input !== undefined ? "upload" : "userFile"}`,
+        `${process.env.REACT_APP_ADMIN_API}/${
+          input !== undefined ? "upload" : "userFile"
+        }`,
         formData,
         {
           headers: {
